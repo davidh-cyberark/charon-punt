@@ -31,14 +31,15 @@ RUN chmod +x /src/bin/export.sh
 RUN chmod +x /src/bin/account_upload.sh
 
 
+# Create running image
 FROM alpine:latest
 
 COPY --from=build /src/bin/* /bin
 
 RUN apk update
-RUN apk add --no-cache powershell file bash jq yq gawk
-RUN file /bin/medusa
-RUN file /bin/safe
+RUN apk add --no-cache bash jq
+
+# Mount point for tmpfs
 RUN mkdir /data
 
 WORKDIR /data
