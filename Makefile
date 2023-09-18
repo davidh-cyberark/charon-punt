@@ -1,6 +1,6 @@
 # Makefile
 
-# Updated: <2023-09-15 16:12:09 david.hisel>
+# Updated: <2023-09-18 16:15:35 david.hisel>
 
 build:
 	podman build -t punt:latest -f Dockerfile
@@ -8,8 +8,5 @@ build:
 nocache-build:
 	podman build --no-cache -t punt:latest -f Dockerfile
 
-MigrationPlatform.zip: paspolicy/Policy-MigrationPlatform.xml paspolicy/Policy-MigrationPlatform.ini
-	(cd paspolicy && zip ../MigrationPlatform.zip Policy-MigrationPlatform.ini Policy-MigrationPlatform.xml)
-
-clean:
-	rm -f MigrationPlatform.zip
+run:
+	podman run --rm -it --name punt -v $(CURDIR)/local.env:/tmp/local.env --mount type=tmpfs,destination=/data localhost/punt:latest

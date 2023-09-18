@@ -10,6 +10,9 @@ fi
 set -o allexport
 source /tmp/local.env 
 
+read -p "Enter PAS User: " PAS_USER
+export PAS_USER
+
 export OUTFILE="${JSONFILE}.txt"
 
 

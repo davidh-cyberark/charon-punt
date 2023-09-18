@@ -8,6 +8,9 @@ if [ -z "$EXPORT_DATA_FILE" ]; then
     exit 1
 fi
 
+read -s -p "Enter HC Vault Token: " VAULT_TOKEN
+export VAULT_TOKEN
+
 set -o allexport
 source /tmp/local.env 
 

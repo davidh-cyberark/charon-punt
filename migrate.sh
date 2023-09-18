@@ -24,13 +24,12 @@ elif [ -f /tmp/local.env ]; then
 fi
 
 
-
-if [ -z "$PAS_ENDPOINT" -o -z "$PAS_USER" -o -z "$PAS_PASS" ]; then
-    echo "ERROR: please ensure env vars are set: PAS_ENDPOINT, PAS_USER, PAS_PASS."
+if [ -z "$PAS_ENDPOINT" ]; then
+    echo "ERROR: please ensure env var PAS_ENDPOINT is set."
     exit 1
 fi
-if [ -z "$VAULT_ADDR" -o -z "$VAULT_SKIP_VERIFY" -o -z "$VAULT_TOKEN" ]; then
-    echo "ERROR: please ensure env vars are set: VAULT_ADDR, VAULT_SKIP_VERIFY, VAULT_TOKEN."
+if [ -z "$VAULT_ADDR" -o -z "$VAULT_SKIP_VERIFY" ]; then
+    echo "ERROR: please ensure env vars are set: VAULT_ADDR, VAULT_SKIP_VERIFY."
     exit 2
 fi
 
