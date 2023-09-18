@@ -2,6 +2,15 @@
 
 Update: <Wed Sep 13 18:01:40 CDT 2023>
 
+## Introduction
+
+* TODO: What is this?
+* TODO: What will this help you to do?
+
+### THIS IS A DRAFT IMPLEMENTATION 
+
+This impelementation will help to show what is possible to get the secrets from HC Vault to PAS Vault.
+
 ## Quick Start
 
 1. In PAS UI (aka PVWA):
