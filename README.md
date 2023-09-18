@@ -28,7 +28,7 @@ This repo will demonstrate a simple way to migrate Hashi Vault KV secrets into P
    3. Duplicate the "Unix via SSH" platform and give it the name "Migration Platform"
 2. Clone this repo:  <https://github.com/davidh-cyberark/charon-punt>
    1. Copy `local.env.example` to `local.env`
-   2. Edit `local.env`` and fill in the appropriate values
+   2. Edit `local.env` and fill in the appropriate values
    3. Build the container, run `make build`
    4. Run the container and enter credentials when prompted, run `make run`
       * MUST use `--rm` -- since this is sensitive data, we want to remove the container when done
